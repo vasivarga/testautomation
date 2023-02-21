@@ -11,7 +11,6 @@ toyota.accelereaza_masina(10)
 
 toyota.accelereaza_masina(10)
 toyota.accelereaza_masina(10)
-
 toyota.accelereaza_masina(100)
 
 toyota.decelereaza_masina(100)
