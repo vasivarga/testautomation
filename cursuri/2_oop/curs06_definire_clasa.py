@@ -109,7 +109,7 @@ if __name__ == "__main__":
     # culoare, model, propulsie, consum, numar_locuri, viteza_maxima, faruri
     bmw = Masina("rosu", "X5", "benzina", "a1", 4, 150, "oprite")
 
-    # bmw = Masina()
+    # bmw = Masina()  - nu mai este valid dupa ce avem constructor explicit (cel cu __init__)
     print(f"Masina bmw are culoarea {bmw.culoare}")
     bmw.tractiune = "fata"
     print(f"Masina bmw are tractiunea {bmw.tractiune}")
@@ -118,7 +118,6 @@ if __name__ == "__main__":
     print(bmw.faruri)
 
     skoda = Masina("albastru", "fabia", "hybrid", "a1", 4, 180, "pornite")
-    # skoda = Masina()
     skoda.an_fabricatie = 2021
     print(f"Masina skoda a fost fabricata in anul {skoda.an_fabricatie}")
     bmw.an_fabricatie = 2020
@@ -134,9 +133,5 @@ if __name__ == "__main__":
     bmw.accelereaza_masina(180)
     print(f"Viteza curenta a masinii bmw este {bmw.viteza_curenta}")
     print(f"Faruri accesate din clasa: {Masina.faruri}")
-
-# volkswagen = Masina()
-# print(volkswagen.faruri)
-# print(volkswagen.viteza_curenta, volkswagen.viteza_maxima, volkswagen.culoare, volkswagen.model)
 
 print("Instructiune dupa if")

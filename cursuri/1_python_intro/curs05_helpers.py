@@ -4,6 +4,13 @@ def accesare_elemente_dictionar(**kwargs):
         print("")
 
 
+def calcul_suma_numere(*args):
+    suma = 0
+    for arg in args:
+        suma = suma + arg
+    return suma
+
+
 def print_nr_vocale_consoane(text):
     nr_vocale = 0
     nr_consoane = 0
@@ -15,12 +22,3 @@ def print_nr_vocale_consoane(text):
         else:
             nr_consoane += 1
     print(f"Textul '{text}' contine {nr_vocale} vocale si {nr_consoane} consoane.")
-
-
-def calcul_suma_numere(*args):
-    suma = 0
-    for arg in args:
-        suma = suma + arg
-    return suma
-
-
