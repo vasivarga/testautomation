@@ -1,27 +1,32 @@
 """
 POO = Programare orientata pe obiecte
 OOP = Object Oriented Programming
-Clasa = O structura de tip tipar / blueprint / reteta care serveste drept ghid pentru un element care ar PUTEA exista
+
+Clasa = structura de tip tipar / blueprint / prototip / reteta care serveste drept ghid pentru un element care ar PUTEA exista
+
 Componentele unei clase:
-- atribute = proprietatile cu care se vor identifica obiectele
+
+1. Atribute (field-uri, proprietati) = proprietatile cu care se vor identifica obiectele
 - pentru a accesa un atribut dintr-o clasa in interiorul acelei clase se foloseste keyword-ul self
 in caz contrar se va considera ca se face referinta catre parametrii metodei
-- pentru a accesa un atribut dintr-o clasa in afara clasei se folosesc urmatoarele:
-a) un obiect instantiat din acea clasa
-b) decoratorul @staticmethod pentru a accesa atributele si metodele clasei
-c) prin conceptul de mostenire a unei clase (vom discuta la cursul 7)
+- accesarea unui atribut dintr-o clasa in afara clasei se poate face in urmatoarele moduri:
+    a) un obiect instantiat din acea clasa
+    b) decoratorul @staticmethod pentru a accesa atributele si metodele clasei
+    c) prin conceptul de mostenire a unei clase (vom discuta la cursul 7)
 - atributele pot avea valori implicite daca exista niste valori general valabile
 - daca nu exista valori general valabile atunci atributele vor avea valoarea initiala None
-- metode = actiunile pe care le poate face un obiect
+
+2. Metode = actiunile pe care le poate face un obiect
                         ATENTIE!!! Metodele sunt de fapt niste functii create in interiorul clasei
                          In afara clasei = functii
                          In interiorul clasei = metode
 Obiect = instanta a clasei, reprezentare reala a tiparului reprezentat de clasa
 pot sa instantiez oricate obiecte dintr-o anumita clasa
 
-Constructor = Element care va fi folosit pentru instantierea obiectelor dintr-o clasa
+3. Constructor = Element care va fi folosit pentru instantierea obiectelor dintr-o clasa
 Scopul unui constructor este de a ajuta sistemul sa instantieze obiectul dintr-o clasa
 Exista doua tipuri de constructori:
+
 a) constructor explicit care obliga utilizatorul sa populeze anumite atribute la instantierea	obiectului
 si daca este cazul sa defineasca o regula de populare a atributelor
 
@@ -34,93 +39,76 @@ Pot sa definesc mai multi constructori in aceeasi clasa atata timp cat vor avea 
 class Masina:
     culoare = "Fuchsia"
     model = None
-    nivel_dotare = "basic"
     tractiune = "spate"
-    forma = None
     propulsia = None
     an_fabricatie = None
     numar_inmatriculare = None
     numar_locuri = None
     consum = None
-    schimbator = "manual"
+    cutie_viteza = "manuala"
     viteza_maxima = 150
     viteza_curenta = 0
     faruri = "test"
 
+    def __init__(self, culoare, model, propulsie, consum, numar_locuri, viteza_maxima, faruri):
+        # if culoare == "orange":
+        #     self.culoare = 'portocaliu'
+        # else:
+        #     self.culoare = culoare
+        self.model = model
+        self.propulsia = propulsie
+        self.consum = consum
+        self.numar_locuri = numar_locuri
+        self.viteza_maxima = viteza_maxima
+        self.faruri = faruri
 
-def __init__(self, culoare, model, nivel_dotare, forma, propulsie, consum, numar_locuri, viteza_maxima, faruri):
-    if culoare == "orange":
-        self.culoare = 'portocaliu'
-    else:
-        self.culoare = culoare
-    self.model = model
-    self.nivel_dotare = nivel_dotare
-    self.forma = forma
-    self.propulsia = propulsie
-    self.consum = consum
-    self.numar_locuri = numar_locuri
-    self.viteza_maxima = viteza_maxima
-    self.faruri = faruri
+    """
+    Actiuni:
+    - pornire
+    - accelerare
+    - decelerare
+    - oprire
+    - claxon
+    """
 
+    def porneste_masina(self):
+        self.faruri = "pornite"
+        print("Am pornit masina")
 
-"""
-Actiuni:
-- pornire
-- accelerare
-- decelerare
-- oprire
-- drift
-- claxon
-"""
+    def accelereaza_masina(self, valoare_accelerare):
+        if self.viteza_curenta + valoare_accelerare > self.viteza_maxima:
+            self.viteza_curenta = self.viteza_maxima
+            print(f"Ati atins deja viteza maxima, nu mai puteti accelera. Viteza: {self.viteza_curenta} km/h")
+        else:
+            self.viteza_curenta += valoare_accelerare
+            print(f"Acceleram cu {valoare_accelerare} km/h. Viteza: {self.viteza_curenta} km/h")
 
+    def decelereaza_masina(self, valoare_decelerare):
+        if self.viteza_curenta - valoare_decelerare >= 0:
+            print(f"Am decelerat cu {valoare_decelerare} km/h. Viteza: {self.viteza_curenta} km/h")
+        else:
+            print(f"Am decelerat maxim. Viteza: {self.viteza_curenta} km/h")
 
-def porneste_masina(self):
-    self.faruri = "pornite"
-    print("Am pornit masina")
+    def opreste_masina(self):
+        if self.viteza_curenta == 0:
+            self.faruri = "oprite"
+            print("Am oprit masina")
 
-
-def accelereaza_masina(self, valoare_accelerare):
-    if self.viteza_curenta == self.viteza_maxima \
-            or self.viteza_curenta + valoare_accelerare > self.viteza_maxima \
-            or self.viteza_curenta - valoare_accelerare > 20:
-        self.viteza_curenta = self.viteza_maxima
-        print("Ati atins deja viteza maxima, nu mai puteti accelera")
-    else:
-        self.viteza_curenta += valoare_accelerare
-        print(f"Am accelerat cu {valoare_accelerare} km/h")
-
-
-def decelereaza_masina(self, valoare_decelerare):
-    if self.viteza_curenta > 0 and self.viteza_curenta > valoare_decelerare:
-        self.viteza_curenta -= valoare_decelerare
-        print(f"Am decelerat cu {valoare_decelerare} km/h")
-    else:
-        self.viteza_curenta = 0
-
-
-def opreste_masina(self):
-    if self.viteza_curenta == 0:
-        self.faruri = "oprite"
-        print("Am oprit masina")
-
-
-def drift_masina(self, viteza_drift):
-    if self.viteza_curenta - viteza_drift > 20:
-        self.viteza_curenta += viteza_drift
-        print("Masina face derapaj controlat")
-
-
-def claxoneaza_masina(self):
-    print("tit tit")
+    @staticmethod  # metoda statica (fara self) - se poate accesa fara a crea un obiect de tip Masina
+    def claxoneaza_masina():
+        print("tiit tiiiit")
 
 
 print("Instructiune in afara if-ului")
 
 # Ii spunem compilatorului sa ruleze acest cod doar daca acesta e fisierul principal
+# acest lucru va
 if __name__ == "__main__":
     print("Instructiune in interiorul if-ului")
-    # culoare,model,nivel_dotare,forma, propulsie,consum,numar_locuri,viteza_maxima
-    bmw = Masina("rosu", "X5", "confort", "suv", "benzina", "a1", 4, 150, "oprite")
+
+    # culoare, model, propulsie, consum, numar_locuri, viteza_maxima, faruri
+    bmw = Masina("rosu", "X5", "benzina", "a1", 4, 150, "oprite")
+
     # bmw = Masina()
     print(f"Masina bmw are culoarea {bmw.culoare}")
     bmw.tractiune = "fata"
@@ -129,7 +117,7 @@ if __name__ == "__main__":
     print(f"Tractiunea implicita din clasa Masina este {Masina.tractiune}")
     print(bmw.faruri)
 
-    skoda = Masina("albastru", "fabia", "premium", "break", "hybrid", "a1", 4, 180, "pornite")
+    skoda = Masina("albastru", "fabia", "hybrid", "a1", 4, 180, "pornite")
     # skoda = Masina()
     skoda.an_fabricatie = 2021
     print(f"Masina skoda a fost fabricata in anul {skoda.an_fabricatie}")
@@ -145,7 +133,6 @@ if __name__ == "__main__":
     print(f"Viteza curenta a masinii bmw este {bmw.viteza_curenta}")
     bmw.accelereaza_masina(180)
     print(f"Viteza curenta a masinii bmw este {bmw.viteza_curenta}")
-
     print(f"Faruri accesate din clasa: {Masina.faruri}")
 
 # volkswagen = Masina()
