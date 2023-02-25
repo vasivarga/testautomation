@@ -55,10 +55,17 @@ class Masina:
         # pentru a ne referi la atributele clasei, se va folosi <<self>>
 
         # argumentele din __init__ <<culoare, model, propulsie, etc>> nu sunt identice cu field-urile din clasa, ele
-        # au fost denumite la fel pentru a scoate in evidenta diferentele dintre ele
+        # au fost denumite la fel tocmai pentru a scoate in evidenta diferentele dintre acestea
+        # valorile din __init__ vor veni atunci cand vom declara un obiect de tip Masina
+
+        # aici intalnim conceptul de polimorfism, despre care vom discuta la cursul urmator
 
         # deci <<self.culoare>> se refera la variabila declarata la inceputul clasei,
-        # iar <<culoare>> va fi valoarea pe care o primeste
+        # iar <<culoare>> din __init__ va fi valoarea pe care o primeste obiectul de tip Masina() la initializare
+
+        # daca declaram un obiect de tip Masina: bmw = Masina("verde", "X3" ...etc)
+        # acel "verde" va inlocui culoarea initiala 'Fuchsia'
+
         self.culoare = culoare
         self.model = model
         self.propulsia = propulsie
