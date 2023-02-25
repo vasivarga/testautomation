@@ -50,11 +50,16 @@ class Masina:
     viteza_curenta = 0
     faruri = "test"
 
+    # definim constructorul explicit al clasei
     def __init__(self, culoare, model, propulsie, consum, numar_locuri, viteza_maxima, faruri):
-        # if culoare == "orange":
-        #     self.culoare = 'portocaliu'
-        # else:
-        #     self.culoare = culoare
+        # pentru a ne referi la atributele clasei, se va folosi <<self>>
+
+        # argumentele din __init__ <<culoare, model, propulsie, etc>> nu sunt identice cu field-urile din clasa, ele
+        # au fost denumite la fel pentru a scoate in evidenta diferentele dintre ele
+
+        # deci <<self.culoare>> se refera la variabila declarata la inceputul clasei,
+        # iar <<culoare>> va fi valoarea pe care o primeste
+        self.culoare = culoare
         self.model = model
         self.propulsia = propulsie
         self.consum = consum
@@ -71,6 +76,7 @@ class Masina:
     - claxon
     """
 
+    # definim metoda porneste_masina()
     def porneste_masina(self):
         self.faruri = "pornite"
         print("Am pornit masina")
