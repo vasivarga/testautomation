@@ -10,7 +10,6 @@ Daca definim o clasa copil care mostenste o clasa abstracta / interfata
 si nu implementam metodele abstracte, atunci vom primi o eroare
 
 b) toate metodele dintr-o clasa sunt abstracte - in acest caz clasa se va numi <<interfata>>
-interfata
 
 Putem spune ca o clasa abstracta functioneaza ca sablon pentru subclase. 
 Clasele abstracte nu pot fi instantiate si necesită crearea unor subclase 
@@ -28,7 +27,7 @@ proprietatile clasei ABC (Abstract Base Class/Clasa de Baza Abstracta)
 class Animal(ABC):
 
     # Definim o proprietate abstracta <<sange>>
-    # Atentie! Acesta va fi o proprietate (atribut/field)
+    # Atentie! Aceasta va fi o proprietate (atribut/field)
     # Desi seamana cu definirea unei metode, in clasele care vor extinde clasa Animal, <<sange>> va fi o proprietate
     # Pentru a defini proprietati abstracte, folosim decoratorul @property urmat de @abstractmethod (in ordinea asta)
     # Astfel obligam clasele care extind clasa Animal sa contina un atribut (field/proprietate) cu numele sange
