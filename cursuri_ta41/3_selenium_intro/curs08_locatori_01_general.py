@@ -189,9 +189,14 @@ first_name_absolut = driver.find_element(By.XPATH, '/html/body/div/form/div/div[
 # cu @ marcam atributul, apoi ii indicam valoarea EXACTA intre ghilimele
 
 # acelasi element cu XPATH-uri diferite
+
+# xpath relativ care selecteaza toate elementele cu id-ul first-name
 first_name_relativ_fara_tag_cu_id = driver.find_element(By.XPATH, '//*[@id="first-name"]')
+# xpath relativ care selecteaza toate elementele de tip input si cu id-ul first-name
 first_name_relativ_cu_tag_cu_id = driver.find_element(By.XPATH, '//input[@id="first-name"]')
+# xpath relativ care selecteaza toate elementele (indiferent de tag) si cu atributul @placeholder avand valoarea "Enter first name"
 first_name_relativ_fara_tag_cu_placeholder = driver.find_element(By.XPATH, '//*[@placeholder="Enter first name"]')
+# xpath relativ care selecteaza toate elementele de tip input si cu atributul @placeholder avand valoarea "Enter first name"
 first_name_relativ_cu_tag_cu_placeholder = driver.find_element(By.XPATH, '//input[@placeholder="Enter first name"]')
 print("")
 
@@ -212,11 +217,17 @@ print("")
  [id|="radio-button"] - selecteaza toate elementele ale caror id e egal cu sau incepe cu radio-button
 """
 
-# acelasi element cu CSS-uri diferite
+# ##### acelasi element cu CSS-uri diferite
+
+# doar cu #ID
 first_name_cu_id_css = driver.find_element(By.CSS_SELECTOR, '#first-name')
+# tag si #ID
 first_name_cu_tag_si_id_css = driver.find_element(By.CSS_SELECTOR, 'input#first-name')
+# tag si ID, de data asta ca id-ul e mentionat la fel ca orice alt atribut si fara #
 first_name_cu_tag_si_atribut_id_css = driver.find_element(By.CSS_SELECTOR, 'input[id="first-name"]')
+# tag si atributul placeholder
 first_name_cu_tag_si_atribut_placeholder_css = driver.find_element(By.CSS_SELECTOR, 'input[placeholder="Enter first name"]')
+# tag cu clasa si atributul id
 first_name_cu_tag_clasa_si_id = driver.find_element(By.CSS_SELECTOR, 'input.form-control[id="first-name"]')
 
 # element cu tag-ul input si atributul type = radio
