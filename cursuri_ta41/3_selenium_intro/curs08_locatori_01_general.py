@@ -243,7 +243,7 @@ WebElement = un WebElement reprezinta un element dintr-o pagina HTML.
 
 Obiectul (variabila) care reprezinta un Web Element nu e altceva decat o referinta catre acel element.
 
-Daca pagina se face un refresh pe pagina, sau daca elementul se reincarca,
+Daca se face un refresh pe pagina sau daca elementul se reincarca,
 referintele pot deveni invalide si primim un StaleElementReferenceException
 """
 
@@ -265,6 +265,41 @@ time.sleep(1)
 # cand programul se opreste, observam variabilele << link_web_form >> si << link_web_form_nou >>
 # chiar daca au acelasi locator, ele nu sunt identice.
 # cele doua elemente fac parte din aceeasi sesiune, dar au UUID-uri diferite (UUID = universally unique identifier)
+
+
+# tag_name - proprietate ce ne da tag-ul HTML al elementului
+first_name_input = driver.find_element(By.ID, 'first-name')
+print(f'Elementul are tag-ul HTML: {first_name_input.tag_name}')
+
+# click() - face click pe elementul pe care este apelat
+first_name_input.click()
+time.sleep(1)
+
+# send_keys() - simuleaza tastarea de caractere
+# Nota: nu este nevoie de click pe element inainte sa folosim send_keys()
+first_name_input.send_keys("Ion Popescu")
+time.sleep(1)
+
+# clear() - reseteaza valoarea unui element
+first_name_input.clear()
+time.sleep(1)
+
+#-------------------------------------------------
+# text - ne da textul de pe un element
+titlu = driver.find_element(By.TAG_NAME, "h1")
+text_titlu = titlu.text
+
+assert text_titlu == "Complete Web Form", "Testul a picat"
+
+print(f'Titlul contine textul: {text_titlu}')
+
+# Atentie! proprietatea <<text>> a unui WebElement nu este acelasi lucru ca valoarea unui input!!!
+print(f'Elementul contine textul: {first_name_input.text}')
+
+# get_attribute()
+# pentru a afla continutul unui input, folosim metoda get_attribute()
+print(f'Elementul contine textul: {first_name_input.get_attribute("value")}')
+
 
 
 # la final e important sa inchidem driverul, altfel poate ramane deschis
