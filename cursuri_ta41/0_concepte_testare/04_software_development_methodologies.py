@@ -65,7 +65,7 @@ Elemente ale metodologiei Agile:
     pastrate si respectiv din punctul de vedere al lucrurilor care nu au fost ok si trebuie imbunatatite.
 
 Sprint = O perioada de timp in care ne asumam sa implementam o serie de functionalitati. De regula se defineste la un
-interval de doua saptamani,dar este la latitudinea echipei
+interval de doua saptamani, dar este la latitudinea echipei
 
 Un proiect implementat in Agile este format dintr-o succesiune de sprint-uri care fiecare implementeaza cate o bucata din produs.
 Rezultatul unui sprint se numeste product increment (pentru ca incrementeaza numarul de functionalitati gata de utilizate pentru produsul nostru)
