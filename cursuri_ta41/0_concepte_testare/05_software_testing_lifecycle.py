@@ -93,7 +93,7 @@ cate mai sunt deschise, daca au fost identificate riscuri DE PRODUS, lessons lea
 
 Niveluri de testare
 
-1. Unit testing = cea mai mica bucata functionala din cod (de regula o functie, o functie care testeaza o alta functie).
+1. Unit testing = cea mai mica bucata functionala din cod (de regula o functie care testeaza o alta functie).
                 Este facut de regula de catre developeri (dezvoltatori)
 
 2. Component testing = verificarea functionalitatii componentelor individuale dintr-o aplicatie, neconectate neaparat cu
