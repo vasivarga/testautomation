@@ -39,14 +39,14 @@ Criterii de iesire (exit criteria) = conditii care trebuie indeplinite pentru a 
                                 anumit interval de timp, nu am mai gasit bug-uri deloc intr-un anumit interval de timp)
 
 2. Test monitoring and control
-- este o etapa continua care incepe o data cu etapa de planning si se termina o data cu etapa de inchidere
-- rolul acestei etape este de a monitoriza in permanenta proiectul pentru a ne asigura ne indeplinim obiectivele,
-ca livram produsul la timp si ca  nu exista anumite riscuri care ar putea perturba cursul proiectului
-- daca exista situatii neplacute care s-au reprodus sau urmeaza sa se reproduca se iau masuri de control pentru a putea
-sa readucem proiectul intr-o zona de siguranta
-- de regula se indeplineste prin trimiterea unor rapoarte de status periodice (test status report) - generate fie zilnic,
-fie saptamanal, fie lunar si trimise team lead-erului si respectiv project managerului - sau prin sedinte zilnice de
-standup in mediile Agile
+    - este o etapa continua care incepe o data cu etapa de planning si se termina o data cu etapa de inchidere
+    - rolul acestei etape este de a monitoriza in permanenta proiectul pentru a ne asigura ne indeplinim obiectivele,
+        ca livram produsul la timp si ca  nu exista anumite riscuri care ar putea perturba cursul proiectului
+    - daca exista situatii neplacute care s-au reprodus sau urmeaza sa se reproduca se iau masuri de control pentru a
+        putea sa readucem proiectul intr-o zona de siguranta
+    - de regula se indeplineste prin trimiterea unor rapoarte de status periodice (test status report) - generate fie
+        zilnic, fie saptamanal, fie lunar si trimise team lead-erului si respectiv project managerului - sau prin
+        sedinte zilnice de standup in mediile Agile
 
 3. Test analysis
 Este o etapa in care:
@@ -107,7 +107,8 @@ Niveluri de testare
 
 4. System testing = verificarea corectitudinii unei functionalitati complete (end to end - sau prescurtat: e2e)
 
-5. Acceptance testing = verificarea aplicatiei din punctul de vedere al utilizatorului si respectiv a indeplinirii nevoilor acestuia
-- alpha testing = se face la sediul furnizorului de catre echipa de testare
-- beta testing = se face la sediul clientului intr-un mediul real sau intr-un mediu similar cu cel real
+5. Acceptance testing = verificarea aplicatiei din punctul de vedere al utilizatorului si respectiv a indeplinirii
+    nevoilor acestuia
+    - alpha testing = se face la sediul furnizorului de catre echipa de testare
+    - beta testing = se face la sediul clientului intr-un mediul real sau intr-un mediu similar cu cel real
 """
