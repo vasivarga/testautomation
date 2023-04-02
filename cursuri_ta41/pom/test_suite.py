@@ -1,3 +1,5 @@
+import argparse
+import sys
 import unittest
 
 import HtmlTestRunner
@@ -25,3 +27,5 @@ class TestSuite(unittest.TestCase):
         )
 
         runner.run(teste_de_rulat)
+
+

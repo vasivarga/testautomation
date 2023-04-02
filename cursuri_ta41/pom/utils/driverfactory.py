@@ -13,4 +13,3 @@ class DriverFactory:
         driver.implicitly_wait(3)
         return driver
 
-

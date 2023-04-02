@@ -10,7 +10,6 @@ class BasePage:
         self.driver = driver
 
     BASE_URL = "https://demo.nopcommerce.com/"
-    button_login = (By.CSS_SELECTOR, "a.ico-login")
 
     def wait_for_element_to_be_present(self, element_locator, seconds_to_wait):
         wait = WebDriverWait(self.driver, seconds_to_wait)
