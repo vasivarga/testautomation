@@ -6,12 +6,12 @@ from pom.pages.base_page import BasePage
 
 class LoginPage(BasePage):
 
-    EMAIL_INPUT = (By.ID, "Email")
-    PASS_INPUT = (By.ID, "Password")
-    LOGIN_BUTTON = (By.XPATH, "//button[text()='Log in']")
-    FORGOT_PASSWORD_LINK = (By.XPATH, "//a[text()='Forgot password?']")
+    EMAIL_INPUT = (By.CLASS_NAME, "email")
+    PASS_INPUT = (By.CLASS_NAME, "password")
+    LOGIN_BUTTON = (By.CLASS_NAME, "login-button")
     ERROR_MESSAGE_MAIN = (By.CSS_SELECTOR, "div.message-error")
     ERROR_MESSAGE_EMAIL = (By.ID, "Email-error")
+    FORGOT_PASSWORD_LINK = (By.XPATH, "//a[text()='Forgot password?']")
 
     LOGIN_PAGE_URL = "https://demo.nopcommerce.com/login"
 

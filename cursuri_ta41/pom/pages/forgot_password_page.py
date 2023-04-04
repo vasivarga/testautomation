@@ -7,8 +7,10 @@ from selenium.webdriver.common.by import By
 class ForgotPasswordPage(BasePage):
 
     EMAIL_INPUT = (By.ID, "Email")
+    RECOVER_BUTTON = (By.CLASS_NAME, "password-recovery-button")  # sau XPATH //button[text()='Recover']
     ERROR_MESSAGE_EMAIL = (By.ID, "Email-error")
-    RECOVER_BUTTON = (By.XPATH, "//button[text()='Recover']")
+
+    FORGOT_PASSWORD_PAGE_URL = "https://demo.nopcommerce.com/passwordrecovery"
 
     def __init__(self, driver: webdriver):
         super().__init__(driver)
@@ -21,9 +23,6 @@ class ForgotPasswordPage(BasePage):
 
     def get_email_error_message_text(self):
         return self.get_element_text(self.ERROR_MESSAGE_EMAIL)
-
-    def clear_email_input(self):
-        self.clear(self.EMAIL_INPUT)
 
     def click_recover_button(self):
         self.click(self.RECOVER_BUTTON)
