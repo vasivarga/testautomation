@@ -13,11 +13,19 @@ from teste.test_05_dropdown import TestDropdown
 Un test suite (suita de teste) este o colectie care cuprinde mai multe teste
 Vom instala libraria html-testrunner pentru a genera raoarte
 
-pip install html-testRunner 
+    pip install html-testRunner 
+
+Apoi vom putea rula suita si din terminal in urmatoarele moduri: 
+
+    1) secvential, cu comanda: pytest _selenium_extras/test_suite.py
+    
+    2) mai multe in paralel, cu comanda: pytest _selenium_extras/test_suite.py -n 2
+    unde -n 2 reprezinta numarul de teste care pot rula in paralel
 """
 
 
-# pentru ca am importat toata libraria unittest, trebuie sa o specificam in fata clasei modulul
+# pentru ca am importat toata libraria unittest (randul 1 din cod),
+# trebuie sa o specificam in fata clasei TestCase modulul
 class TestSuite(unittest.TestCase):
 
     def test_suite(self):  # numele metodei este predefinit si NU trebuie schimbat
