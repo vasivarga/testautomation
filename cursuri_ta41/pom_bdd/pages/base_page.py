@@ -1,11 +1,16 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
-from pom_bdd.browser import Browser
-from unittest import TestCase as Assert
+from browser import Browser
 
 
 class BasePage(Browser):
+
+    SEARCH_INPUT = (By.ID, "small-searchterms")
+    SEARCH_BUTTON = (By.XPATH, "//button[text()='Search']")
+
     BASE_URL = "https://demo.nopcommerce.com/"
 
     def wait_for_element_to_be_present(self, element_locator, seconds_to_wait):
@@ -14,6 +19,9 @@ class BasePage(Browser):
 
     def find(self, locator):
         return self.driver.find_element(*locator)
+
+    def find_all(self, locator):
+        return self.driver.find_elements(*locator)
 
     def click(self, locator):
         return self.find(locator).click()
@@ -30,5 +38,31 @@ class BasePage(Browser):
     def clear(self, locator):
         self.find(locator).clear()
 
-    def verify_url(self, expected_url):
-        Assert.assertEquals(self.driver.current_url, expected_url, "URLs are not matching")
+    # va returna True daca expected_url este egal cu URL-ul
+    # paginii din care apelam metoda
+    def is_url_correct(self, expected_url):
+        return expected_url == self.driver.current_url
+
+    def type_text_on_search_input(self, text):
+        # self.driver.find_element(*self.SEARCH_INPUT).send_keys(text)
+        self.type(self.SEARCH_INPUT, text)
+
+    def click_search_button(self):
+        self.click(self.SEARCH_BUTTON)
+
+    def select_dropdown_option_by_text(self, dropdown_locator, text):
+        dropdown_element = self.find(dropdown_locator)
+        select = Select(dropdown_element)
+        select.select_by_visible_text(text)
+
+    def check_checkbox(self, checkbox_locator):
+        checkbox_element = self.find(checkbox_locator)
+
+        if not checkbox_element.is_selected():
+            self.click(checkbox_element)
+
+    def uncheck_checkbox(self, checkbox_locator):
+        checkbox_element = self.find(checkbox_locator)
+
+        if checkbox_element.is_selected():
+            self.click(checkbox_element)

@@ -21,7 +21,6 @@ class LoginPage(BasePage):
         self.type(self.EMAIL_INPUT, email)
 
     # va seta o adresa de email neinregistrata folosind metoda set_email() de mai sus
-    # se foloseste pentru pasul BDD fara parametri
     def set_unregistered_email(self):
         self.set_email("wrong_email@host.com")
 
@@ -29,7 +28,6 @@ class LoginPage(BasePage):
         self.type(self.PASS_INPUT, password)
 
     # va seta o parola folosind functia set_password() de mai sus
-    # se foloseste pentru pasul BDD fara parametri
     def set_wrong_password(self):
         self.set_password("parolaoarecare")
 
@@ -51,6 +49,5 @@ class LoginPage(BasePage):
     def get_email_error_message_text(self):
         return self.get_element_text(self.ERROR_MESSAGE_EMAIL)
 
-    # se foloseste pentru pasul BDD fara parametri
     def is_no_customer_account_found_message_displayed(self):
         return "No customer account found" in self.get_main_error_message_text()
