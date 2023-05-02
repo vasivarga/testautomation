@@ -1,7 +1,8 @@
 from selenium import webdriver
 
-from pom.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+
+from p5_pom.pages.base_page import BasePage
 
 
 class ForgotPasswordPage(BasePage):

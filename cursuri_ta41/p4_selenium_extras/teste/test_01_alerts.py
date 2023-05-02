@@ -17,8 +17,8 @@ Testele se pot rula in urmatoarele moduri:
 - toate testele din clasa -pictograma verde play- in partea stanga a numelui clasei
 - din terminal cu pytest - secvential sau in paralel
 
-comanda pentru rulat secvential: pytest 4_selenium_extras/teste/test_01_alerts.py
-comanda pentru rulat in paralel : pytest 4_selenium_extras/teste/test_01_alerts.py -n 2
+comanda pentru rulat secvential: pytest p4_selenium_extras/teste/test_01_alerts.py
+comanda pentru rulat in paralel : pytest p4_selenium_extras/teste/test_01_alerts.py -n 2
 """
 
 

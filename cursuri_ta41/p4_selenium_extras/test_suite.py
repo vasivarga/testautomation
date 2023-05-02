@@ -17,9 +17,9 @@ Vom instala libraria html-testrunner pentru a genera raoarte
 
 Apoi vom putea rula suita si din terminal in urmatoarele moduri: 
 
-    1) secvential, cu comanda: pytest 4_selenium_extras/test_suite.py
+    1) secvential, cu comanda: pytest p4_selenium_extras/test_suite.py
     
-    2) mai multe in paralel, cu comanda: pytest 4_selenium_extras/test_suite.py -n 2
+    2) mai multe in paralel, cu comanda: pytest p4_selenium_extras/test_suite.py -n 2
     unde -n 2 reprezinta numarul de teste care pot rula in paralel
 """
 

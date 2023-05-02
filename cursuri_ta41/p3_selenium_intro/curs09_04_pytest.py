@@ -16,14 +16,14 @@ Pentru a rula testele unul dupa altul, se foloseste comanda:
 
  pytest calea_catre_fisier/fisier.py     
     
--> in cazul nostru:     pytest 3_selenium_intro/curs09_04_pytest.py
+-> in cazul nostru:     pytest p3_selenium_intro/curs09_04_pytest.py
 
 ### Teste in paralel (mai multe deodata):
 Pentru a rula teste in paralel, se foloseste comanda:
 
     pytest calea_catre_fisier/fisier.py -n nr_instante  
      
-    -> in cazul nostru:     pytest 3_selenium_intro/curs09_04_pytest.py -n 2
+    -> in cazul nostru:     pytest p3_selenium_intro/curs09_04_pytest.py -n 2
 """
 
 
