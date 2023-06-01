@@ -1,3 +1,13 @@
+# ######################### PROPRIETATILE SI METODELE UNUI WEBELEMENT #########################
+
+"""
+WebElement = un WebElement reprezinta un element dintr-o pagina HTML.
+
+Obiectul (variabila) care reprezinta un Web Element nu e altceva decat o referinta catre acel element.
+
+Daca se face un refresh pe pagina sau daca elementul se reincarca,
+referintele pot deveni invalide si primim un StaleElementReferenceException
+"""
 import time
 
 from selenium import webdriver
@@ -24,7 +34,7 @@ login_button = driver.find_element(By.ID, "login")
 username_input.send_keys(USER)
 password_input.send_keys(PASS)
 
-# ############ clear() - sterge atributul "value" al unui element - adica goleste un input
+# ############ clear() - sterge atributul "value" al unui element - adica goleste textul de pe input
 password_input.clear()
 
 # ############ is_displayed() - returneaza un boolean
