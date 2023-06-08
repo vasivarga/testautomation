@@ -128,11 +128,21 @@ class Test(unittest.TestCase):
         wait = WebDriverWait(self.driver, seconds_to_wait)
         return wait.until(EC.presence_of_element_located(element_locator))
 
+    # metoda ajutatoare - asteapta ca un element sa devina ABSEENT in HTML (absent != invizibil)
+    # metoda are 2 parametri:
+    # 1 - element_locator: locatorul elementului dupa care asteptam sa dispara
+    # 2 - seconds_to_wait: numarul maxim de secunde de asteptare pentru ca elementul sa dispare
+    # Observate: cu EC.none_of() se neaga conditia din EC (EC = expected_condition)
     def wait_for_element_to_disappear(self, element, timp):
         wait = WebDriverWait(self.driver, timp)
-        return wait.until(
-            EC.none_of(EC.presence_of_element_located(element)))  # cu EC.none_of() se neaga conditia din EC
+        return wait.until(EC.none_of(EC.presence_of_element_located(element)))
 
+    # metoda ajutatoare - returneaza TRUE daca elementul este PREZENT (prezent nu inseamna ca e si vizibil neaparat)
+    # - metoda are ca parametru variabila element_locator: locatorul elementului dupa care asteptam sa dispara
+    # - folosind driver.find_elements() putem sa ne dam seama daca un element este sau nu prezent
+    # - driver.find_elements() nu da eroare daca nu gaseste un element dupa un locator dat, ci returneaza o lista goala
+    # - daca lista e goala, inseamna ca nu e elementul prezent [len(lista) = 0 deci return FALSE]
+    # - daca lista nu e goala, inseamna ca avem cel putin un element gasit [len(lista) > 0 deci return TRUE]
     def is_element_present(self, locator):
         return len(self.driver.find_elements(*locator)) > 0  # daca nu gaseste nimic, returneaza o lista goala
 
