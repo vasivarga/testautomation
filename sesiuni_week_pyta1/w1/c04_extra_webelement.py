@@ -25,7 +25,9 @@ PASS = "Iloveautomation41!"
 
 driver.get(LINK)
 
+"""
 # ############## METODELE CLASEI WEBELEMENT ##############
+"""
 
 # ############ send_keys() - simuleaza tastarea de caractere pe un element
 username_input = driver.find_element(By.ID, "userName")
