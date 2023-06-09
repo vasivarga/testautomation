@@ -11,12 +11,16 @@ from webdriver_manager.chrome import ChromeDriverManager
 """
 ########### IMPLICIT WAIT ###########
 
-Aplicatiile web (si nu numai) pot avea mai multe elemente dinamice care apar si dispar in functie de anumite actiuni ale 
-utilizatorului, sau pur si simplu timpul de incarcare sau randarea site-ului sunt ineficiente. 
-Daca driverul incearca sa interactioneze cu un element inainte ca acesta sa apara, se va returna o eroare, iar 
-testele vor fi marcate ca fiid "picate". 
+Aplicatiile web pot avea mai multe elemente dinamice care apar/dispar in functie de anumite actiuni ale utilizatorului, 
+sau pot fi cazuri in care timpul de incarcare/randarea site-ului sunt ineficiente, iar elementele nu apar instant. 
+Daca driverul incearca sa interactioneze cu astfel de elemente inainte ca acestea sa apara, se va returna o eroare, 
+iar testele vor fi marcate ca fiind "picate". 
 
-Functia implicitly_wait(x) va face driver-ul sa astepte dupa un element timp de x secunde inainte returnarii unei erori.
+Funcția implicitly_wait() din Selenium WebDriver specifică un timp maxim de așteptare implicită pentru căutarea unui 
+element pe pagină înainte ca WebDriver-ul să arunce o excepție NoSuchElementException.
+
+Pe scurt, WebDriver-ul va aștepta pentru o perioadă specificată înainte de a arunca o excepție în cazul în care 
+elementul nu este găsit instant.
 
 ATENTIE: Odata setat, implicitly_wait() se va aplica pe tot parcursul "vietii" driverului sau pana cand acesta va fi 
 schimbat cu un alt implicitly_wait() aplicat pe driver.
