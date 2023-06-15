@@ -115,11 +115,11 @@ Vom instala plugin-urile ini si gherkin pentru a ne ușura munca
 File -> Settings -> Plugins -> Marketplace: cautam ini, apoi gherkin si le instalam
 
 Vom instala package-urile behave si behave-html-formatter
-pip install behave
-pip install behave-html-formatter
+    pip install behave
+    pip install behave-html-formatter
 
 
 Exemple de comenzi pentru a rula teste cu tag-uri:
-behave --tags=smoke
-behave -f html -o behave-report.html --tags=smoke
-behave --tags=smoke,simple  [FARA SPATIU INTRE TAG-URI IN ACEST CAZ!]
+    behave --tags=smoke
+    behave -f html -o behave-report.html --tags=smoke
+    behave --tags=smoke,simple       ATENTIE [FARA SPATIU INTRE TAG-URI IN ACEST CAZ!]
