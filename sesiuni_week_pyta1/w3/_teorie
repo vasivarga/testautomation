@@ -104,7 +104,7 @@ comportamentul aplicației în funcție de specificațiile de comportament defin
             When Utilizatorul apasă butonul "Continuă cumpărături"
             Then Utilizatorul este redirecționat pe pagina cu produse
 
-        @simple
+        @smoke
         Scenario: Finalizarea comenzii
             Given Utilizatorul are un produs în coș
             When Utilizatorul apasă butonul "Finalizare comanda"
