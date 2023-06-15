@@ -122,4 +122,4 @@ Vom instala package-urile behave si behave-html-formatter
 Exemple de comenzi pentru a rula teste cu tag-uri:
     behave --tags=smoke
     behave -f html -o behave-report.html --tags=smoke
-    behave --tags=smoke,simple       ATENTIE [FARA SPATIU INTRE TAG-URI IN ACEST CAZ!]
+    behave --tags=smoke,regression       ATENTIE [FARA SPATIU INTRE TAG-URI IN ACEST CAZ!]
