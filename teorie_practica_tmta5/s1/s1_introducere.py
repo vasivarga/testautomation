@@ -166,20 +166,3 @@ print(type(variabila_boolean_false))
 # ATENTIE! Aici este string si nu boolean:
 # variabila_boolean_false = "False"
 
-
-"""
-################# 5. TYPE CASTING ################# 
-Type casting se referă la procesul de transformare a unei valori sau a unei expresii de un anumit tip de date 
-în alt tip de date.
-"""
-
-a = "5"
-b = 3
-
-# Daca dorim sa facem suma intre a + b (adica 5+3), trebuie sa convertim string-ul din variabila a intr-un numar intreg,
-# altfel avem eroare
-print(int(a) + b)
-
-# Daca dorim sa lipim textul a de textul b (adica 53), trebuie sa convertim nr-ul intreg din variabila b intr-un numar
-# string, altfel avem eroare
-print(a + str(b))
