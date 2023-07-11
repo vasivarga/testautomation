@@ -8,10 +8,10 @@ Testare dinamica -> cuprinde tehnici de testare ce necesita rularea aplicatiei d
 
 a) whitebox (backend - testare de cod)
 tehnici de testare
-    - statement coverage
-    - decision coverage
+    - statement coverage - teste pentru a executa fiecare instructiune de program
+    - decision coverage - se concentreaza pe testarea tuturor ramurilor decizionale din codul care sta in spatele software-ului
 
-b) blackbox (frontend - testare de interfata)
+b) blackbox (frontend - testare de interfata, fara a se cunoaste structura interna a programului)
 tehnici de testare:
     - equivalence partitioning
     - boundary value analysis

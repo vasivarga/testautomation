@@ -41,7 +41,7 @@ Criterii de iesire (exit criteria) = conditii care trebuie indeplinite pentru a 
 2. Test monitoring and control
     - este o etapa continua care incepe o data cu etapa de planning si se termina o data cu etapa de inchidere
     - rolul acestei etape este de a monitoriza in permanenta proiectul pentru a ne asigura ne indeplinim obiectivele,
-        ca livram produsul la timp si ca  nu exista anumite riscuri care ar putea perturba cursul proiectului
+        ca livram produsul la timp si ca nu exista anumite riscuri care ar putea perturba cursul proiectului
     - daca exista situatii neplacute care s-au reprodus sau urmeaza sa se reproduca se iau masuri de control pentru a
         putea sa readucem proiectul intr-o zona de siguranta
     - de regula se indeplineste prin trimiterea unor rapoarte de status periodice (test status report) - generate fie

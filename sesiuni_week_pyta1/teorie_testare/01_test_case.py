@@ -30,5 +30,8 @@ Exemplu de testcase:
 
     Rezultatul final asteptat: se afiseaza pagina corespunzatoare unui login reusit
 
-    Rezultatul final actual: identic cu cel
+Daca un test case esueaza, rezulta ca avem un bug in aplicatie.
+
+Bug = defectiune a unui program care face ca acesta sa functioneze in mod incorect
+
 """
