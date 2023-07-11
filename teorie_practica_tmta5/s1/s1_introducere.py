@@ -27,6 +27,17 @@ venv (Virtual Environment)
 - fiecare proiect Python va avea propriul venv in care se vor putea instala/adauga librarii externe
 """
 
+a = 5
+b = 3
+c = a + b
+
+print(c)
+
+x = "Hello world"
+print(x)
+
+x = "Bye world"
+print(x)
 
 """
 ################# 2. VARIABILE ################# 
