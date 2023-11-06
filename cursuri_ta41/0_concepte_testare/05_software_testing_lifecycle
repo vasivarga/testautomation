@@ -1,4 +1,3 @@
-"""
 SDLC = Software Development Lifecycle
 STLC = Software Testing Lifecycle
 
@@ -111,4 +110,3 @@ Niveluri de testare
     nevoilor acestuia
     - alpha testing = se face la sediul furnizorului de catre echipa de testare
     - beta testing = se face la sediul clientului intr-un mediul real sau intr-un mediu similar cu cel real
-"""

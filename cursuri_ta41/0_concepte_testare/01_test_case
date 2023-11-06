@@ -1,8 +1,7 @@
-"""
 TEST CASE
-
+______________________________________________________________
 Un test case este o multime de pasi pe care un tester ii parcurge pentru a vedea daca o anumita functionalitate
-dintr-o aplicatie este implementata coresct sau nu.
+dintr-o aplicatie este implementata corect sau nu.
 
 Continutul unui test case:
     - Descrierea testului
@@ -20,18 +19,13 @@ Exemplu de testcase:
 
     Descriere: Login cu user si pass corecte
 
-    Preconditie: Contul sa fie creat
+    Preconditie: Contul cu care ne logam sa fie creat
 
-    Pasi: - deschidem browserul la pagina <www.ceva.com>
-          - introducem username-ul in input-ul corespunzator
-          - introducem passwordul in input-ul corespunzator
+    Pasi: - deschidem browserul la pagina <www.site.com>
+          - introducem usernameul in fieldul corespunzator
+          - introducem passwordul in fieldul corespunzator
           - Test Data: username = user123, password = admin1234
           - Facem click pe butonul de login
 
     Rezultatul final asteptat: se afiseaza pagina corespunzatoare unui login reusit
-
-Daca un test case esueaza, rezulta ca avem un bug in aplicatie.
-
-Bug = defectiune a unui program care face ca acesta sa functioneze in mod incorect
-
-"""
+    Rezultatul final actual: identic cu cel asteptat

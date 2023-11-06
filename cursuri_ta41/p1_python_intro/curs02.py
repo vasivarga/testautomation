@@ -175,7 +175,7 @@ if nr_1 < nr_2:
 if nr_1 > nr_2:
     print(f"Am intrat pe ramura IF: {nr_1} este mai mare decat {nr_2}")
 elif nr_2 == nr_1:
-    print(f"Am intrat pe prima ramura ELSE-IF {nr_2} este mai mare decat {nr_1}")
+    print(f"Am intrat pe prima ramura ELSE-IF {nr_2} este egal cu {nr_1}")
 elif nr_2 > nr_1:
     print(f"Am intrat pe a doua ramura ELSE-IF {nr_2} este mai mare decat {nr_1}")
 

@@ -1,5 +1,7 @@
-"""
-Testare statica -> cuprinde tehnici de testare fara sa rulam ce testam (analizam documentele care descriu cum se va
+
+Testare statica
+_________________________________________________________________________________________________
+cuprinde tehnici de testare fara sa rulam ce testam (analizam documentele care descriu cum se va
 dezvolta un feature de catre un developer). Unele bug-uri pot fi eliminate inca in faza aceasta.
 
 = > Aici intra conceptul de Early Testing -> testarea timpurie economiseste timp si bani
@@ -8,10 +10,10 @@ Testare dinamica -> cuprinde tehnici de testare ce necesita rularea aplicatiei d
 
 a) whitebox (backend - testare de cod)
 tehnici de testare
-    - statement coverage - teste pentru a executa fiecare instructiune de program
-    - decision coverage - se concentreaza pe testarea tuturor ramurilor decizionale din codul care sta in spatele software-ului
+    - statement coverage
+    - decision coverage
 
-b) blackbox (frontend - testare de interfata, fara a se cunoaste structura interna a programului)
+b) blackbox (frontend - testare de interfata)
 tehnici de testare:
     - equivalence partitioning
     - boundary value analysis

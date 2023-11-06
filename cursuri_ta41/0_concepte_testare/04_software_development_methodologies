@@ -1,10 +1,11 @@
-"""
 O metodologie de software development reprezinta o serie de proceduri care descriu felul in care echipa se organizeaza
 cu scopul de a crea un produs software.
+
 Exista mai multe metodologii de software development:
-- Agile
+
+Cateva exemple:
 - Waterfall
-- V-model
+- Agile
 
 Waterfall = O metodologie de software development care presupune desfasurarea activitatilor in cascada (adica rezultatul
             unei etape reprezinta date de intrare pentru urmatoarea etapa)
@@ -69,5 +70,3 @@ interval de doua saptamani, dar este la latitudinea echipei
 
 Un proiect implementat in Agile este format dintr-o succesiune de sprint-uri care fiecare implementeaza cate o bucata din produs.
 Rezultatul unui sprint se numeste product increment (pentru ca incrementeaza numarul de functionalitati gata de utilizate pentru produsul nostru)
-
-"""
