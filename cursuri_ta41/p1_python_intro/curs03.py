@@ -309,5 +309,5 @@ print(sucuri["fanta"]["televiziune promovare"][2])
 pip install pylint
 cd <calea la care se afla fisierul pe care vreau sa il analizez>
 ls (list) -> pentru a vedea toate fisierele din folderul curent
- pylint curs_03.py -> evaluare fisier
+pylint curs_03.py -> evaluare fisier
 """

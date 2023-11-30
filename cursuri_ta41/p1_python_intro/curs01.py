@@ -56,7 +56,7 @@ print("Hello world")
 """
 ################# 3. VARIABILE ################# 
 
-- Sunt adrese de memorie la care noi putem sa stocam informatii
+- Sunt adrese de memorie la care putem sa stocam informatii
 - Numele variabilei este de fapt numele adresei de memorie la care sunt stocate informatiile
 - Numele variabilelor trebuie sa respecte anumite reguli:
 a) trebuie sa inceapa cu litera mica (conventie)
@@ -73,7 +73,7 @@ de fapt sistemul nu va aloca o alta adresa de memorie ci va schimba informatia d
 # snake_case
 # PascalCase
 
-# Declarare si initializare variabila:
+# ### Declarare si initializare variabila:
 nume = "Andrei"
 
 '''
@@ -85,6 +85,7 @@ In randul de mai sus
 Daca nu era intre ghilimele, sistemul ar fi cautat variabila numita "Alin". Nu ar fi gasit-o si ar fi returnat eroare
 '''
 
+# ### Suprascriere
 # daca nu folosesc variabila 'nume', ea va fi marcata cu galben ca si atentionare ca nu am folosit continutul anterior
 nume = "Andreea"  # momentul in care dau o alta valoare pentru o variabila se numeste suprascriere
 
@@ -108,17 +109,17 @@ Exista patru tipuri de date primitive in Python:
 Tipul de data in python nu este specificat in mod explicit ca in Java/C, ci rezulta din valoarea stocata in variabila
 Asta este motivul pentru care putem sa facem schimbare de tip de data
 
-Mai exista si tipuri de date derivate, dar ele au la baza tot tipuri de date simple.
+Mai exista si alte tipuri de date (derivate), dar ele au la baza tot tipuri de date simple.
 """
 
-# STRING (SIR)
+# STRING (SIR DE CARACTERE)
 variabila_string = "text"  # am declarat si initializat o variabila cu tipul de date string
 
 # INT (INTEGER/INTREG)
 variabila_int = 34
 
 # ATENTIE! Aici este string si nu int:
-# variabila_int = "34"
+# variabila_str = "34"
 
 # BOOLEAN
 variabila_boolean_true = True
@@ -131,11 +132,13 @@ variabila_boolean_false = False
 # variabila_boolean_false = "False"
 
 # FLOAT
-variabila_float = 3.14  # am declarat si initializat o variabila float. Obs: se foloseste punct (.) nu virgula (,)
+variabila_float = 3.14  # am declarat si initializat o variabila float.
+# Obs: se foloseste punct (.) nu virgula (,)
 
-# ATENTIE! Urmatoarea instructiune nu va stoca o valoare, ci va stoca un tuplu (Curs 3):
+# ATENTIE!
+# Urmatoarea instructiune nu va stoca o valoare, ci va stoca un tuplu (Curs 3):
 # variabila_float_redeclarata = 3,14
-# print(variabila_float_redeclarata)  # afiseaza un tuplu format din numerele 3 si 14
+# print(variabila_float_redeclarata) # afiseaza un tuplu format din numerele 3 si 14
 
 """
 ################# 6. FUNCTIA print() #################
@@ -143,12 +146,12 @@ variabila_float = 3.14  # am declarat si initializat o variabila float. Obs: se 
 Functia print este o metoda prin care putem sa afisam informatii in consola
 
 Structura functiei print este urmatoarea:
-1. numele functiei (print)
-2. valoarea pe care vrem sa o afisam (text, numere, caractere speciale etc)
-- Daca vrem sa printam text, este foarte important sa fie pus intre ghilimele sau apostroafe. 
+1. numele functiei - print
+2. valoarea pe care vrem sa o afisam (text, numere, caractere speciale, etc)
+- Daca vrem sa afisam un text, este foarte important ca acesta sa fie pus intre ghilimele sau apostroafe. 
 - In caz contrar, sistemul va crede ca este o variabila, pe care nu o va gasi si va returna eroare
 
-In limbajele de programare in general semnul ghilimele reprezinta delimitator de text
+In limbajele de programare (in general) semnul ghilimele reprezinta delimitator de text
 - Orice text este pus intre ghilimele de inceput si ghilimele de final
 - Daca incercam sa scriem un al doilea text intre ghilimele in interiorul unui text intre ghilimele, 
 atunci sistemul va considera ghilimelele de inceput al celui de-al doilea text ca fiind sfarsitul primului text     

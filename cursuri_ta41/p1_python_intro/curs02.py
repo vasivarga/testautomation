@@ -96,52 +96,35 @@ variabila_atribuire_initiala *= 5  # rezultatul va suprascrie valoarea curenta d
 variabila_atribuire_initiala /= 5  # rezultatul va suprascrie valoarea curenta din variabila
 
 # 3. OPERATORI LOGICI: AND, NOT, OR
+
+sunt_angajat = True
+sunt_student = True
+sunt_somer = False
+
 # OPERATORUL AND (strict) -> returneaza TRUE doar daca fiecare expresie returneaza TRUE
-
-print(nr_1 < nr_2 and nr_1 <= nr_2)
-# nr_1<nr_2 = TRUE, nr_1 <=nr_2 = TRUE, TRUE AND TRUE = TRUE
-
-print(nr_1 < nr_2 and nr_1 >= nr_2)
-# nr_1<nr_2 = TRUE,         nr_1 >=nr_2 = FALSE,        TRUE AND FALSE = FALSE
+print(sunt_angajat and sunt_somer)
+print(sunt_angajat and sunt_student)
 
 # OPERATORUL OR (mai putin strict) -> returneaza TRUE daca cel putin o expresie returneaza TRUE
-print(nr_1 < nr_2 or nr_1 <= nr_2)
-# nr_1<nr_2 = TRUE,		    nr_1 <=nr_2 = TRUE,		    TRUE OR TRUE = TRUE
+print(sunt_angajat or sunt_somer)
 
-print(nr_1 < nr_2 or nr_1 >= nr_2)
-# nr_1<nr_2 = TRUE,		    nr_1 >=nr_2 = FALSE,	    TRUE OR FALSE = TRUE
-
-print(nr_2 == nr_1 or nr_1 >= nr_2)
-# nr_2==nr_1 = FALSE,	    nr_1 >=nr_2 = FALSE,	    FALSE OR FALSE = FALSE
-
-# OPERATORUL NOT -> returneaza opusul expresiei
-
-print(not nr_1 < nr_2)
-# nr_1<nr_2 = TRUE,         NOT TRUE = FALSE
-
-print(not nr_1 < nr_2 and nr_1 <= nr_2)
-# nr_1<nr_2 = TRUE,         NOT TRUE = FALSE,       nr_1<=nr_2 = TRUE,      FALSE AND TRUE = FALSE
-
-print(not nr_1 < nr_2 and nr_1 <= nr_2 or nr_2 > nr_1)
-# nr_1 < nr_2 = TRUE,       NOT TRUE = FALSE,
-# nr_1 <= nr_2 = TRUE,      FALSE AND TRUE = FALSE,
-# nr_2 > nr_1= TRUE,        FALSE OR TRUE = TRUE
-
-print(not nr_1 < nr_2 or nr_1 <= nr_2 and nr_2 > nr_1)
-# nr_1<nr_2 = TRUE,         NOT TRUE = FALSE,
-# nr_1<=nr_2 = TRUE,        nr_2 > nr_1= TRUE,
-# TRUE AND TRUE = TRUE,     FALSE OR TRUE = TRUE
-
-print((not nr_1 < nr_2 or nr_1 <= nr_2) and nr_2 > nr_1)
-# nr_1<nr_2 = TRUE,         NOT TRUE = FALSE,
-# nr_1<=nr_2 = TRUE,        FALSE OR TRUE = TRUE,
-# nr_2 > nr_1= TRUE,        TRUE AND TRUE = TRUE
-
-print(not ((nr_1 < nr_2 or nr_1 <= nr_2) and nr_2 > nr_1))
-# nr_1<nr_2 = TRUE,     nr_1<=nr_2 = TRUE,      TRUE OR TRUE = TRUE,
-# nr_2 > nr_1= TRUE,    TRUE AND TRUE = TRUE,   NOT TRUE = FALSE
+# OPERATORUL NOT -> returneaza opusul valorii expresiei
+print(not sunt_angajat)
 
 # Ordinea prioritatii operatorilor logici: NOT > AND > OR (cu respectarea parantezelor, ca in aritmetica)
+# prima data se va executa NOT mereu, apoi AND, iar la final OR
+
+print(sunt_angajat or sunt_student or sunt_somer)
+# TRUE sau TRUE sau FALSE => TRUE
+
+print(sunt_angajat and sunt_somer or sunt_student)
+# TRUE si FALSE sau TRUE =>
+# prima data se face TRUE si FALSE => FALS | Ramane FALSE sau TRUE => TRUE
+
+print(not sunt_somer and sunt_angajat or sunt_student)
+# not FALSE si TRUE sau TRUE
+# prima data se face not FALSE =>
+# ramane TRUE si TRUE sau TRUE => TRUE
 
 """
 Structura alternativa IF - este o modalitate prin care putem sa acoperim situatiile in care vrem sa
@@ -166,6 +149,9 @@ FORMA SIMPLA, GENERALA:
                         else:
                             instructiune_3
 """
+
+nr_1 = 5
+nr_2 = 7
 
 # IF SIMPLU (Fara alternative)
 if nr_1 < nr_2:
